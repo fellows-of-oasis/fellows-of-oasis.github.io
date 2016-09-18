@@ -1,26 +1,29 @@
-<!-- Copyright (c) 2016 - Charlie Voix -->
-
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="shared-styles.html">
+<link rel="import" href="oasis-clock.html">
 
 <dom-module id="oasis-view3">
+
   <template>
-    <style include="shared-styles">
+
+    <!-- Style -->
+    <style>
+
       :host {
         display: block;
-
-        padding: 10px;
       }
+
     </style>
 
-    <div class="card">
-      <div class="circle">3</div>
-    </div>
+    <!-- Content -->
+    <oasis-clock></oasis-clock>
+
   </template>
 
   <script>
-    Polymer({
-      is: 'oasis-view3'
-    });
+  Polymer({
+    is: "oasis-view3"
+
+  });
   </script>
+  
 </dom-module>
