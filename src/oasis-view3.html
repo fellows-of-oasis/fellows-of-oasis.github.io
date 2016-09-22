@@ -1,5 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="oasis-clock.html">
+<link rel="import" href="oasis-isometric.html">
 
 <dom-module id="oasis-view3">
 
@@ -12,11 +12,74 @@
         display: block;
       }
 
+      .flex-grid {
+        display: flex;
+
+      }
+
+      .col {
+        flex: 1;
+
+      }
+
+      .canvas-one {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0.3;
+        -webkit-filter: blur(6px);
+      }
+
+      .canvas-two {
+        opacity: 0.3;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        -webkit-transform: rotate(180deg);
+        -webkit-filter: invert(1) hue-rotate(100deg) blur(1px);
+      }
+
+      .canvas-three {
+        opacity: 0.3;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        -webkit-transform: rotate(90deg);
+        -webkit-filter: invert(1) hue-rotate(100deg) blur(1px);
+      }
+
+      .canvas-four {
+        opacity: 0.3;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        -webkit-transform: rotate(270deg);
+        -webkit-filter: invert(1) hue-rotate(100deg) blur(1px);
+      }
+
     </style>
 
-    <!-- Content -->
-    <oasis-clock></oasis-clock>
+    <!-- Content
+    <div class="flex-grid">
+      <div class="col"><oasis-isometric></oasis-isometric></div>
+      <div class="col"><oasis-isometric></oasis-isometric></div>
+    </div> -->
 
+    <div class="canvas-one">
+      <oasis-isometric></oasis-isometric>
+    </div>
+
+    <div class="canvas-two">
+      <oasis-isometric></oasis-isometric>
+    </div>
+
+    <div class="canvas-three">
+      <oasis-isometric></oasis-isometric>
+    </div>
+
+    <div class="canvas-four">
+      <oasis-isometric></oasis-isometric>
+    </div>
   </template>
 
   <script>
@@ -25,5 +88,5 @@
 
   });
   </script>
-  
+
 </dom-module>
